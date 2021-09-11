@@ -29,7 +29,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/")
 public class DoctorController {
 	
-	static final String DOCTOR_MS_URL="http://localhost:8085/";
+	static final String DOCTOR_MS_URL="http://localhost:8080/api/";
 
 	@Autowired
 	private RestTemplate restTemplate;

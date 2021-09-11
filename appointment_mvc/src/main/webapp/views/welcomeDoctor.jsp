@@ -7,12 +7,30 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Doctor Home Page</title>
 </head>
+<style>
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:40px auto;
+    background: #9575CD ;
+    color:floralwhite;
+}
+</style>
 <body style="text-align:center;">
 
+
+    <p><header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Hello Doctor ${name}</h1>
+                </div>
+                <div class="col-12 col-sm">
+                </div>
+            </div>
+        </div> </header> </p>
     
-<h1>Hello Doctor ${name}</h1>
 <h1>Patients List</h1>
 	<table border="2" width="70%" cellpadding="2" align="center">
 	<tr><th>BookId</th><th>DoctorName</th><th>PatientName</th><th>Payment</th><th>Status</th><th>DateTime</th></tr>
@@ -24,12 +42,12 @@
     <td>${appointment.payment}</td>
     <td>${appointment.status}</td>
     <td>${appointment.dateTime}</td>
-    <td><a href="http://localhost:8080/doctor/treating/${appointment.bookId}" >Treat</a></td>
+    <td><a href="http://localhost:8083/doctor/treating/${appointment.bookId}" >Treat</a></td>
    
     </tr>
     </c:forEach>
     </table>
     <br/>
-	 <a href="http://localhost:8080/logout">Log out</a>
+	 <a href="http://localhost:8083/logout">Log out</a>
 </body>
 </html>
